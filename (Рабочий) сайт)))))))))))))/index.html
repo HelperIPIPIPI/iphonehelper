@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPhoneHelper | Профессионалы экосистемы Apple</title>
+    <!-- ИКОНКА САЙТА -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍏</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍏</text></svg>">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍏</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍏</text></svg>">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍏</text></svg>">
+
+    <!-- SEO МЕТАТЕГИ -->
+    <meta name="description" content="IPhoneHelper - удаленная работа в экосистеме Apple. Обработка клиентских заявок на устройствах Apple. Присоединяйся к нашей команде!">
+    <meta name="keywords" content="удаленная работа, Apple, iPhone, MacBook, iPad, работа из дома, экосистема Apple">
+    <meta name="author" content="IPhoneHelper">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="IPhoneHelper - Удаленная работа в экосистеме Apple">
+    <meta property="og:description" content="Присоединяйся к нашей команде! Работай удаленно из любой точки мира на устройствах Apple">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-site.web.app">
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%);
+            color: #ffffff;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Анимированный фон */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 2em;
+            opacity: 0.1;
+            animation: floatRandom 20s infinite linear;
+        }
+
+        @keyframes floatRandom {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, 50px) rotate(90deg); }
+            50% { transform: translate(50px, 100px) rotate(180deg); }
+            75% { transform: translate(-50px, 75px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        /* Логотип */
+        .logo {
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 40px;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            gap: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .logo:hover::before {
+            left: 100%;
+        }
+
+        .apple-logo {
+            font-size: 1.8em;
+            animation: appleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes appleGlow {
+            from { filter: drop-shadow(0 0 5px #34C759); }
+            to { filter: drop-shadow(0 0 20px #34C759) drop-shadow(0 0 30px #34C759); }
+        }
+
+        /* Секции */
+        section {
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #007AFF, #34C759, #007AFF);
+        }
+
+        /* Первый блок */
+        .hero {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Блок "О нас" */
+        .about {
+            background: linear-gradient(135deg, rgba(0,122,255,0.1) 0%, rgba(52,199,89,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0,122,255,0.2);
+            box-shadow: 0 20px 40px rgba(0,122,255,0.1);
+        }
+
+        /* Блок контактов */
+        .contacts {
+            background: linear-gradient(135deg, rgba(52,199,89,0.1) 0%, rgba(0,122,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(52,199,89,0.2);
+            box-shadow: 0 20px 40px rgba(52,199,89,0.1);
+        }
+
+        /* Заголовки */
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ffffff, #a8a8a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .about h2, .contacts h2 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 35px;
+            background: linear-gradient(135deg, #007AFF, #34C759);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* КНОПКА-ЯКОРЬ ПРО УДАЛЕНКУ */
+        .remote-button {
+            display: inline-block;
+            font-size: 1.6em;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 25px;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #FF2D95, #FF6B35, #FFD93D);
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 45, 149, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            animation: rainbowPulse 3s ease-in-out infinite;
+        }
+
+        .remote-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .remote-button:hover::before {
+            left: 100%;
+        }
+
+        .remote-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 45, 149, 0.6);
+        }
+
+        @keyframes rainbowPulse {
+            0%, 100% { 
+                background: linear-gradient(135deg, #FF2D95, #FF6B35, #FFD93D);
+                transform: scale(1);
+            }
+            25% { 
+                background: linear-gradient(135deg, #FF6B35, #FFD93D, #FF2D95);
+            }
+            50% { 
+                background: linear-gradient(135deg, #FFD93D, #FF2D95, #FF6B35);
+                transform: scale(1.02);
+            }
+            75% { 
+                background: linear-gradient(135deg, #FF2D95, #FF6B35, #FFD93D);
+            }
+        }
+
+        /* Текст */
+        .hero p {
+            font-size: 1.4em;
+            color: #e5e5e5;
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .about p {
+            font-size: 1.3em;
+            color: #f0f0f0;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .contacts p {
+            font-size: 1.3em;
+            color: #e5e5e5;
+            margin-bottom: 35px;
+        }
+
+        /* Список преимуществ */
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 40px 0;
+        }
+
+        .features li {
+            margin-bottom: 20px;
+            padding: 20px 25px 20px 65px;
+            position: relative;
+            font-size: 1.2em;
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            border-left: 3px solid #007AFF;
+            transition: all 0.3s ease;
+        }
+
+        .features li:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateX(10px);
+        }
+
+        .features li:before {
+            content: "⚡";
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #34C759;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        /* Кнопка Telegram */
+        .telegram-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .telegram-button {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background: linear-gradient(135deg, #0088cc, #0077b3);
+            color: #ffffff;
+            font-size: 1.4em;
+            font-weight: 700;
+            padding: 25px 50px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,136,204,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .telegram-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .telegram-button:hover::before {
+            left: 100%;
+        }
+
+        .telegram-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,136,204,0.6);
+        }
+
+        .telegram-button i {
+            font-style: normal;
+            font-size: 1.8em;
+            margin-right: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Анимации появления */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero { animation-delay: 0.1s; }
+        .about { animation-delay: 0.3s; }
+        .contacts { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Плавная прокрутка */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            section {
+                padding: 30px 25px;
+                margin-bottom: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .about h2, .contacts h2 {
+                font-size: 2.2em;
+            }
+            
+            .logo {
+                font-size: 1.8em;
+                padding: 15px 25px;
+            }
+            
+            .remote-button {
+                font-size: 1.3em;
+                padding: 18px 30px;
+                width: 100%;
+            }
+            
+            .telegram-button {
+                font-size: 1.2em;
+                padding: 20px 35px;
+                width: 100%;
+            }
+            
+            .features li {
+                padding: 15px 20px 15px 55px;
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5em;
+                padding: 12px 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .about h2, .contacts h2 {
+                font-size: 1.8em;
+            }
+            
+            .remote-button {
+                font-size: 1.1em;
+                padding: 15px 25px;
+            }
+            
+            section {
+                padding: 25px 20px;
+            }
+        }
+
+        /* Скроллбар */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #007AFF, #34C759);
+            border-radius: 4px;
+        }
+
+        /* Selection */
+        ::selection {
+            background: rgba(0,122,255,0.3);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="bg-animation">
+        <div class="floating-icon" style="top:10%; left:5%;">📱</div>
+        <div class="floating-icon" style="top:20%; left:80%;">💻</div>
+        <div class="floating-icon" style="top:60%; left:10%;">⌚</div>
+        <div class="floating-icon" style="top:70%; left:85%;">📱</div>
+        <div class="floating-icon" style="top:40%; left:70%;">💻</div>
+        <div class="floating-icon" style="top:80%; left:20%;">⌚</div>
+    </div>
+
+    <div class="container">
+        <!-- Логотип с яблоком -->
+        <div class="logo">
+            <span class="apple-logo">🍏</span>
+            <span>IPHONEHELPER</span>
+        </div>
+
+        <!-- Приветственная секция -->
+        <section class="hero">
+            <h1>ЭКСПЕРТЫ В ЭКОСИСТЕМЕ APPLE</h1>
+            
+            <!-- КРУТАЯ КНОПКА-ЯКОРЬ ПРО УДАЛЕНКУ -->
+            <a href="#contacts" class="remote-button">
+                🚀 РАБОТАЙ УДАЛЕННО ИЗ ЛЮБОЙ ТОЧКИ МИРА! 🚀
+            </a>
+            
+            <p>Максимальная продуктивность и бесшовный workflow на устройствах Apple. Превращаем любую точку мира в современный офис премиум-класса.</p>
+            
+            <ul class="features">
+                <li>Профессиональная настройка и оптимизация рабочего пространства</li>
+                <li>Бесшовная синхронизация между Mac, iPhone, iPad и Apple Watch</li>
+                <li>Индивидуальный подбор инструментов под ваши бизнес-задачи</li>
+                <li>Максимальная эффективность с помощью экосистемы Apple</li>
+                <li>Круглосуточная техническая поддержка и консультации</li>
+            </ul>
+        </section>
+
+        <!-- Секция "О нас" -->
+        <section class="about">
+            <h2>ПРО НАС</h2>
+            <p><strong>IPhoneHelper</strong> — ведущие специалисты по работе исключительно в экосистеме Apple. Мы превращаем технологии в конкурентное преимущество вашего бизнеса.</p>
+            
+            <p>Наша команда работает только на технике Apple, что гарантирует идеальную интеграцию между устройствами, мгновенную синхронизацию данных и бесперебойную работу всех бизнес-процессов.</p>
+            
+            <p>От первичной заявки до финального результата — каждый этап оптимизирован с помощью передовых технологий Apple, обеспечивая скорость, качество и надежность.</p>
+        </section>
+
+        <!-- Секция контактов -->
+        <section id="contacts" class="contacts">
+            <h2>КОНТАКТЫ</h2>
+            <p>Готовы вывести ваш заработок на новый уровень? Напишите нам в Telegram — обсудим в ближайшее время!</p>
+            
+            <div class="telegram-container">
+                <a href="https://t.me/IPhoneHelpers" class="telegram-button">
+                    <i>🚀</i>
+                    <span>СВЯЗЬ С НАМИ В TELEGRAM</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Дополнительные анимации при скролле
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Плавная прокрутка для всех якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
